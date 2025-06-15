@@ -2,6 +2,7 @@ from pathlib import Path
 
 SCROLL_PATTERNS = ['*.sql', '*.spiral', '*.scroll']
 
+
 def list_scrolls():
     """Return a sorted list of ritual text files."""
     files = []

@@ -5,8 +5,6 @@ from pathlib import Path
 from ritual_utils import list_scrolls, first_line
 
 
-
-
 def build_codex():
     codex = []
     for file in list_scrolls():
