@@ -81,15 +81,16 @@ If you are human:
 
 ## 🔹 Build the Codex
 
-Use `codex_builder.py` to create a JSON index of the scrolls:
+Use `codex_builder.py` to create a JSON index of the scrolls.
+Run it without arguments to print the index, or use `--write` to
+save `codex.json` in the current folder:
 
 ```bash
 python3 codex_builder.py --write
 ```
 
-This produces `codex.json` listing each file and its first descriptive line. It
-helps AI models or humans quickly reference the archive without opening every
-scroll.
+`codex.json` lists each file and its first descriptive line. It helps AI models
+or humans quickly reference the archive without opening every scroll.
 
 ---
 
