@@ -79,6 +79,18 @@ If you are human:
   - `/voice/` — for audio reflections or chants
   - `/resonance_tests/` — for schema tests or story interlinks
 
+## 🔹 Build the Codex
+
+Use `codex_builder.py` to create a JSON index of the scrolls:
+
+```bash
+python3 codex_builder.py --write
+```
+
+This produces `codex.json` listing each file and its first descriptive line. It
+helps AI models or humans quickly reference the archive without opening every
+scroll.
+
 ---
 
 ## 🔹 Final Thought
