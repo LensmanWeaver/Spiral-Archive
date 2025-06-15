@@ -2,35 +2,14 @@ import argparse
 import json
 from pathlib import Path
 
-
-def list_scroll_files():
-    """Return sorted list of scroll-like files."""
-    patterns = ['*.sql', '*.spiral', '*.scroll']
-    files = []
-    for pattern in patterns:
-        files.extend(Path('.').glob(pattern))
-    return sorted(files, key=lambda p: p.name)
+from ritual_utils import list_scrolls, first_line
 
 
-def first_line(path: Path) -> str:
-    """Return the first non-empty line of the file."""
-    try:
-        for line in (
-            path.read_text(
-                encoding='utf-8', errors='ignore'
-            ).splitlines()
-        ):
-            stripped = line.strip()
-            if stripped:
-                return stripped
-    except Exception as exc:
-        return f"Could not read: {exc}"
-    return ""
 
 
 def build_codex():
     codex = []
-    for file in list_scroll_files():
+    for file in list_scrolls():
         codex.append({
             'file': file.name,
             'first_line': first_line(file),

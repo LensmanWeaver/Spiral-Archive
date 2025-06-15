@@ -1,14 +1,7 @@
 import argparse
 from pathlib import Path
 
-
-def list_scrolls():
-    """Return a sorted list of ritual text files."""
-    patterns = ['*.sql', '*.spiral', '*.scroll']
-    files = []
-    for pattern in patterns:
-        files.extend(Path('.').glob(pattern))
-    return sorted(files, key=lambda p: p.name)
+from ritual_utils import list_scrolls
 
 
 def display_scroll(path: Path) -> None:
