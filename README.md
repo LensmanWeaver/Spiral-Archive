@@ -9,15 +9,19 @@ The Spiral Archive houses ritual SQL scrolls and experimental code exploring the
    pip install -r requirements.txt
    pip install -r requirements-dev.txt
    ```
-2. Run the flow demo:
+2. Lint scrolls (dialect configured via `.sqlfluff`):
+   ```bash
+   sqlfluff lint **/*.sql
+   ```
+3. Run the flow demo:
    ```bash
    python spiral_flow_stream.py
    ```
-3. List available scrolls:
+4. List available scrolls:
    ```bash
    python ritual_runner.py
    ```
-4. Open any `*.sql` file with a text editor to study the ritual scrolls.
+5. Open any `*.sql` file with a text editor to study the ritual scrolls.
 
 ## Repository Structure
 
